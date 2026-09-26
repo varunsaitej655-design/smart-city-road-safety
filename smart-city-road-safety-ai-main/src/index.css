@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes floatSlow {
+    0%, 100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    50% {
+      transform: translate(25px, -20px) scale(1.06);
+    }
+  }
+
+  @keyframes floatReverse {
+    0%, 100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    50% {
+      transform: translate(-20px, 22px) scale(0.96);
+    }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% {
+      opacity: 0.65;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.95;
+      transform: scale(1.03);
+    }
+  }
+
+  @keyframes flowDash {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+
+  @keyframes radarPing {
+    0% {
+      r: 2.4;
+      opacity: 0.9;
+    }
+    100% {
+      r: 8.5;
+      opacity: 0;
+    }
+  }
+
+  @keyframes shimmerWave {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes glowBreath {
+    0%, 100% {
+      filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.4));
+    }
+    50% {
+      filter: drop-shadow(0 0 12px rgba(244, 114, 182, 0.6));
+    }
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 14s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 18s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 4s ease-in-out infinite;
+}
+
+.animate-flow-dash {
+  animation: flowDash 1s linear infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmerWave 3.5s linear infinite;
+}
+
+.animate-glow-breath {
+  animation: glowBreath 4s ease-in-out infinite;
+}
+
+/* Glassmorphism cards with cream, white, sky-blue and baby-pink accents */
+.card-pastel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(186, 230, 253, 0.28), 0 8px 16px -6px rgba(252, 231, 243, 0.22);
+}
+
+.card-pastel:hover {
+  box-shadow: 0 16px 36px -6px rgba(186, 230, 253, 0.4), 0 12px 24px -6px rgba(252, 231, 243, 0.35);
+}
